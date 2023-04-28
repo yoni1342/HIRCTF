@@ -8,7 +8,7 @@ export default function Founder() {
             
             <div className='flex flex-col lg:flex-row justify-center items-center'> 
                 <div className='p-6'>
-                    <img src={images.avatar} alt='' className='w-40 h-40 object-cover'/>
+                    <img src={images.avatar} alt='' className='w-60 h-60 object-cover mask mask-squircle bg-primary p-7'/>
                 </div>
                 <div className='py-10 px-7 leading-8 space-y-5 lg:w-[50%]'>
                     <p>

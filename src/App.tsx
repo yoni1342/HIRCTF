@@ -8,6 +8,7 @@ import Consulting from './page/ConsultingPage'
 import ProjectManagment from './page/ProjectManagmentPage'
 import Projects from './page/Projects'
 import Blogs from './page/BlogsPage'
+import Blog from './page/blog'
 function App() {
   return (
     <Routes>
@@ -17,6 +18,8 @@ function App() {
       <Route path='/services/Projectmanagment' element={<ProjectManagment />}></Route>
       <Route path='/projects' element={<Projects />}></Route>
       <Route path='/blogs' element={<Blogs />}></Route>
+      <Route path='/blogs/:id' element={<Blog />}></Route>
+      
     </Routes>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { animation } from "../../../Animations";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 type props = {
   title: string;
@@ -44,9 +45,11 @@ export default function BlogCard({ title, des, imgLink, date }: props) {
             <p>published date</p>
             <p>{date}</p>
           </div>
-          <div className=" text-white btn bg-primary hover:bg-secondary border-0">
-            Read More
-          </div>
+          <Link to={"/blogs/103"}>
+            <div className=" text-white btn bg-primary hover:bg-secondary border-0">
+              Read More
+            </div>
+          </Link>
         </div>
       </div>
     </motion.div>
