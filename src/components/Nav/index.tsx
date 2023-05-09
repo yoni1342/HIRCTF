@@ -8,6 +8,7 @@ type Props = {
 };
 const Navbar = ({name, path}:Props) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showTogel, setShowTogel] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Navbar = ({name, path}:Props) => {
     <nav
       className={`${
         scrollPosition > 0 ? "fixed top-0 left-0 right-0 shadow-md" : ""
-      } flex flex-wrap items-center justify-between p-6 bg-secondary z-10`}
+      } flex flex-wrap items-center justify-between p-6 bg-primary z-10`}
     >
       {/* Logo */}
       <div className="flex items-center mr-6">
@@ -56,35 +57,35 @@ const Navbar = ({name, path}:Props) => {
           <div className="text-xl space-x-8 lg:flex-grow">
             <a
               href="/"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "home" ? "border-b-2 border-primary":""} `} 
+              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "home" ? "border-b-2 border-white":""} `} 
             >
               Home
             </a>
             <a
               href="/about"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "about" ? "border-b-2 border-primary":""}`}
+              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "about" ? "border-b-2 border-white":""}`}
             >
               About
             </a>
 
             <a
               href="/projects"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "projects" ? "border-b-2 border-primary":""}`}
+              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "projects" ? "border-b-2 border-white":""}`}
             >
               Projects
             </a>
 
             <a
               href="/blogs"
-              className= {`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "blogs" ? "border-b-2 border-primary":""}`}
+              className= {`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "blogs" ? "border-b-2 border-white":""}`}
             >
               Blogs
             </a>
 
             <div className="relative mt-4 lg:inline-block lg:mt-0">
               <button
-                className={`text-white focus:outline-none ${name === "services" ? "border-b-2 border-primary":""}`}
-                onClick={toggleMenu}
+                className={`text-white focus:outline-none ${name === "services" ? "border-b-2 border-white":""}`}
+                onClick={()=>{setShowTogel(!showTogel)}}
               >
                 Services
                 <svg
@@ -101,18 +102,18 @@ const Navbar = ({name, path}:Props) => {
               </button>
               <div
                 className={`${
-                  showMenu ? "" : "hidden"
+                  showTogel ? "" : "hidden"
                 } absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-10`}
               >
                 <a
                   href="/services/Consultancy"
-                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "consulting" ? "border-b-2 border-primary":""} capitalize` }
+                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "consulting" ? "border-b-2 border-white":""} capitalize` }
                 >
                   Consultancy
                 </a>
                 <a
                   href="/services/Projectmanagment"
-                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "project" ? "border-b-2 border-primary":""} capitalize` }
+                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "project" ? "border-b-2 border-white":""} capitalize` }
                 >
                   Project Management
                 </a>

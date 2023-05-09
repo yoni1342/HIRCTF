@@ -21,5 +21,10 @@ module.exports = {
   plugins: [
     require("daisyui")
   ],
+  variants: {
+    extend: {
+      textColor: ['last'],
+    },
+  },
 }
 

@@ -2,73 +2,27 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { images } from "../../assets";
+import hero from "../../assets/hero.svg"
 
 const Hero = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 900,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: false,
-    arrows: false,
-  };
-
   return (
-    <div className="">
-      <div className="overflow-hidden lg:clip">
-        <Slider {...settings}>
-          <div className="lg:h-screen pb-10 lg:pb-0 bg-secondary">
-            <div className="flex flex-col h-[70%] items-center justify-center">
-            <div className="container mx-auto text-center ">
-              <h1 className="text-5xl text-white font-bold mb-6">
-                Your Company Name
-              </h1>
-              <p className="text-2xl text-white mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button className="bg-primary text-gray-800 py-3 px-8 rounded-full font-bold text-xl shadow-md hover:shadow-lg transition duration-300">
-                Learn More
-              </button>
-            </div>
-            </div>
+    <div className="h-screen py-4 px-6 lg:flex ">
+      <div className="lg:flex lg:flex-row-reverse items-center justify-center bg-primary/5">
+        <div className="lg:w-[50%]">
+          <img src={hero} alt="" className="w-30"/>
+        </div>
+        <div className="flex flex-col items-center justify-center text-center lg:w-[50%]">
+          <h1 className="text-5xl lg:text-7xl font-bold my-3">
+          Unleash Your Potential with <span className="text-primary">HORN.</span>
+          </h1>
+          <p className="text-center lg:text-xl">
+          Elevate Your Growth. Drive Impact. Partner with HIRCTF for expert research, consultancy, and training services. Unlock new possibilities and accelerate your success today.
+          </p>
+          <div className="bg-primary text-white px-5 py-3 font-bold my-3" >
+            Read More
           </div>
-          <div className="lg:h-screen pb-10 lg:pb-0 bg-secondary">
-            <div className="flex flex-col h-[70%] items-center justify-center">
-            <div className="container mx-auto text-center ">
-              <h1 className="text-5xl text-white font-bold mb-6">
-                Your Company Name
-              </h1>
-              <p className="text-2xl text-white mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button className="bg-primary text-gray-800 py-3 px-8 rounded-full font-bold text-xl shadow-md hover:shadow-lg transition duration-300">
-                Learn More
-              </button>
-            </div>
-            </div>
-          </div>
-          <div className="lg:h-screen pb-10 lg:pb-0 bg-secondary">
-            <div className="flex flex-col h-[70%] items-center justify-center">
-            <div className="container mx-auto text-center ">
-              <h1 className="text-5xl text-white font-bold mb-6">
-                Your Company Name
-              </h1>
-              <p className="text-2xl text-white mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button className="bg-primary text-gray-800 py-3 px-8 rounded-full font-bold text-xl shadow-md hover:shadow-lg transition duration-300">
-                Learn More
-              </button>
-            </div>
-            </div>
-          </div>
-        </Slider>
+        </div>
       </div>
     </div>
   );

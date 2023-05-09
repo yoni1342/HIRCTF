@@ -29,3 +29,10 @@
     }
 }   
 
+.text-last:last-word {
+    /* Define your desired styling for the last word here */
+    color: blue;
+    font-weight: bold;
+    /* ... */
+  }
+

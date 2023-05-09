@@ -16,7 +16,7 @@ export default function index() {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <h2 className="lg:h2 md:h3 sm:h4 h5 px-3 py-7">
+          <h2 className="lg:h2 md:h3 sm:h4 h5 px-3 py-7 lg:w-[70%]">
             Top 5 Brilliant Content Marketing Strategies to Boost Your Business
             Growth
           </h2>

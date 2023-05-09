@@ -14,7 +14,7 @@ export default function Index() {
     setHasAnimated(true);
   }
   return (
-    <div className="lg:px-20 sm:my-20 ">
+    <div className="lg:px-20 sm:my-20">
       <div className="flex justify-between items-center flex-wrap">
         <motion.div
           variants={animation.card}
@@ -28,7 +28,7 @@ export default function Index() {
           }}
           className="w-80 bg-[#3494cc]"
         >
-          <div className="xl:flex flex-col justify-center items-center">
+          <div className="xl:flex flex-col justify-center items-center n">
             <h2 className="text-4xl font-bold py-10 text-white text-center">
               Why Us
             </h2>

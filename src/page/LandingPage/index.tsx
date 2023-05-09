@@ -11,9 +11,12 @@ import Gallery from "../../components/Gallery";
 import Blog from "../../components/Blog";
 import Footer from "../../components/Footer";
 import Contatct from "../../components/Contact";
+import ScrollTop from "../../components/ScrollTop";
+import { motion } from 'framer-motion';
+
 export default function index() {
   return (
-    <div className="w-90% m-auto">
+    <motion.div className="w-90% m-auto" initial="hidden" animate="show">
       <div>
         <Nav name="home" />
       </div>
@@ -50,6 +53,9 @@ export default function index() {
       <div>
         <Footer />
       </div>
-    </div>
+      <div>
+        <ScrollTop /> 
+      </div>
+    </motion.div>
   );
 }
