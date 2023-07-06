@@ -16,4 +16,7 @@ export const images = {
     avatar: require('./User-avatar 1.png'),
     consulting: require('./banner-consulting-concept-text-icons-260nw-770977666 1.png'),
     hero: require('./hero.svg'),
+    intro: require('./intro.png'),
+    offer: require('./offer.png'),
+    offermobil: require('./offermobile.png'),
 }

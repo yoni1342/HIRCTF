@@ -1,101 +1,62 @@
 import React from "react";
 import { images } from "../../assets";
 import Navbar from "../../components/Nav";
-import Footer from '../../components/Footer'
-export default function index() {
+import Footer from "../../components/Footer";
+import { useQuery, gql } from "@apollo/client";
+import Markdown from 'markdown-to-jsx';
+import ReactMarkdown  from "react-markdown";
+
+
+const blog_query = gql`
+  {
+    blogs {
+      edges {
+        node {
+          blogMeta {
+            content
+            coverimage {
+              sourceUrl
+            }
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default function Index() {
+  const { data, loading, error } = useQuery(blog_query);
+  if (loading) return <pre>"Loding"</pre>;
+  if (error) return <pre>{error.message}</pre>;
+  console.log(data)
+  const dataa = data.blogs.edges
+  const htmlcontent = dataa[0].node.blogMeta.content
+  console.log(htmlcontent)
+
   return (
     <div>
       <Navbar name="blogs" />
       <div>
         <div>
-          <img
-            src={images.blog1}
-            alt=""
-            className="w-full lg:h-[35rem] object-contain"
-          />
+          
         </div>
 
         <div className="flex flex-col justify-center items-center">
           <h2 className="lg:h2 md:h3 sm:h4 h5 px-3 py-7 lg:w-[70%]">
-            Top 5 Brilliant Content Marketing Strategies to Boost Your Business
-            Growth
+          {dataa[0].node.blogMeta.title}
           </h2>
-          <div className="py-10 px-7 leading-8 space-y-5 lg:w-[70%]">
-            <p className="text-md font-light mt-2 ">
-                The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.The ascent of portable applications has implied that we currently
-                convey a PC in our pockets wherever we go, and this has changed the
-                manner in which we approach content. While content marketing was
-                once about delivering content for the web, it has now advanced to
-                incorporate applications, web-based media, and even streaming
-                stages.
-            </p>
-
-          </div>
+          {/* <div className="py-10 px-7 leading-8 space-y-5 lg:w-[70%] prose"> */}
+            {/* <Markdown> */}
+              {/* {htmlcontent} */}
+              {/* This is *italic* this is **bold** */}
+            {/* </Markdown> */}
+          {/* </div> */}
+          <div className="py-10 px-7 leading-8 space-y-5 lg:w-[70%] prose-lg" dangerouslySetInnerHTML={{__html: htmlcontent}}>
+            
+            {/* <p className="text-md font-light mt-2 ">
+            </p> */}
+          </  div>
         </div>
       </div>
       <Footer />

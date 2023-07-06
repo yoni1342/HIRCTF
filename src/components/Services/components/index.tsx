@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {animation} from '../../../Animations'
+import { Link } from "react-router-dom";
 
 type ServiceProps = {
   title: string;
   des: string;
   imgLink: string;
+  link: string
 };
 
-function Index({ title, des, imgLink }: ServiceProps) {
+function Index({ title, des, imgLink,link }: ServiceProps) {
   const [hasAnimated, setHasAnimated] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -41,9 +43,11 @@ function Index({ title, des, imgLink }: ServiceProps) {
         <h2 className="lg:h3 md:h4 text-lg font-bold text-primary">{title}</h2>
         <p className="text-sm md:text-base">{des}</p>
         <div className="card-actions justify-end">
-          <button className="btn bg-primary hover:bg-secondary text-white">
+          <Link to={link}>
+          <div className="btn hover:bg-primary shadow-md hover:shadow-lg active:scale-95 hover:border-primary bg-primary border-primary text-white">
             READ MORE
-          </button>
+          </div>
+          </Link>
         </div>
       </div>
     </motion.div>

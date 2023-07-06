@@ -9,7 +9,7 @@ export default function index() {
 
         <div>
         <div>
-          <img src={banner} alt="" className="lg:h-[30rem] w-full" />
+          {/* <img src={banner} alt="" className="lg:h-[30rem] w-full" /> */}
         </div>
         <div className="flex flex-col justify-center items-center">
           <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">Project design/planning and management</h2>

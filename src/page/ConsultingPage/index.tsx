@@ -11,31 +11,31 @@ export default function index() {
 
       <div>
         <div>
-          <img src={banner} alt="" className="w-full" />
+          {/* <img src={banner} alt="" className="w-full" /> */}
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center py-3">
           <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">Consulting Services</h2>
           <div className="py-10 px-7 leading-8 space-y-5 lg:w-[70%]">
             <p>
-              HIRCTF is a multi-disciplinary company, which provides consultancy
-              services in various fields. HIRCTF is client-focused and aim for
+              HORN is a multi-disciplinary company, which provides consultancy
+              services in various fields. HORN is client-focused and aim for
               excellence, relevance and impact in all that it does. Drawing on
               the very best Ethiopian and international expertise, it
               proactively seeks to understand and address each client’s specific
               needs and strategic objectives, and align its consultancy services
               with national and international policies and agendas. This ensures
-              that HIRCTF’s consultancy services will have maximum relevance,
+              that HORN’s consultancy services will have maximum relevance,
               enabling its clients to enhance the impact of their work. Building
-              on this, HIRCTF has planned to expand its operations to share its
+              on this, HORN has planned to expand its operations to share its
               expertise and build alliances elsewhere in Africa.
             </p>
             <p>
-              HIRCTF applies process-based consultancy approach whereby our
+              HORN applies process-based consultancy approach whereby our
               consultants work with clients to instill commitment to change and
               problem-solving process, bolster creative thinking, build the
               necessary capacity and design structured programs that move the
               organization/institution from its current state to the desired
-              future state (i.e., fulfil its dream). Accordingly, HIRCTF
+              future state (i.e., fulfil its dream). Accordingly, HORN
             </p>
 
             <p>
@@ -44,7 +44,7 @@ export default function index() {
               technical and financial management on behalf of the funded bodies.
             </p>
             <p>
-            2. Conduct surveys that are compatible to the interests of clients using strong team that have demonstrated design, methodological, and statistical knowledge through the implementation of large and complex survey research projects. HIRCTF’s teams of research methodologists have many years of experience in design, data collection, analysis, and reporting. HIRCTF’s statisticians, survey methodologists, project managers, survey analysts and subject matter experts work side-by-side to collect the best possible data and increase each client’s ability to act on survey results. The statistical and methodological experience of our survey research staff is complemented by the depth and breadth of the subject matter knowledge within HIRCTF. In addition to this, HIRCTF supports ITS clients by providing a range of data collection methodologies to address its clients most pressing questions. HIRCTF survey teams offer expertise across all data collection modes, such as telephone, mail, web, in-person, and mixed-mode designs. HIRCTF collect data offline on tablets, online using web-interface, capture phone interviews, and conduct cost efficient mixed mode surveys. Our data collection personnel are trained to work with difficult-to-reach, multilingual populations and sensitive topics.
+            2. Conduct surveys that are compatible to the interests of clients using strong team that have demonstrated design, methodological, and statistical knowledge through the implementation of large and complex survey research projects. HORN’s teams of research methodologists have many years of experience in design, data collection, analysis, and reporting. HORN’s statisticians, survey methodologists, project managers, survey analysts and subject matter experts work side-by-side to collect the best possible data and increase each client’s ability to act on survey results. The statistical and methodological experience of our survey research staff is complemented by the depth and breadth of the subject matter knowledge within HORN. In addition to this, HORN supports ITS clients by providing a range of data collection methodologies to address its clients most pressing questions. HORN survey teams offer expertise across all data collection modes, such as telephone, mail, web, in-person, and mixed-mode designs. HORN collect data offline on tablets, online using web-interface, capture phone interviews, and conduct cost efficient mixed mode surveys. Our data collection personnel are trained to work with difficult-to-reach, multilingual populations and sensitive topics.
             </p>
             <p>
             3. Health data management including design of data collection tools, database design, analysis and interpretation.

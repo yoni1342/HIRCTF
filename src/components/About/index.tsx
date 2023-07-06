@@ -1,14 +1,14 @@
-import React,{useState} from "react";
-import about from "../../assets/OBJECTS.svg";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { animation } from "../../Animations/index";
-import { useInView } from 'react-intersection-observer';
-import {images} from '../../assets'
+import { useInView } from "react-intersection-observer";
+import { images } from "../../assets";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const { ref, inView } = useInView({
     threshold: 0,
-    rootMargin: '100px',
+    rootMargin: "100px",
   });
 
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -27,7 +27,7 @@ export default function Index() {
           transition={{
             delay: 0.02,
             type: "tween",
-            duration: 1 ,
+            duration: 1,
           }}
         >
           <h1 className=" lg:h1 md:h2 sm:h3 h4">About Us</h1>
@@ -40,10 +40,10 @@ export default function Index() {
             transition={{
               delay: 0.2,
               type: "tween",
-              duration: 1 ,
+              duration: 1,
             }}
           >
-            <img src={about} alt="" className="lg:w-[30rem]" />
+            <img src={images.intro} alt="" className="lg:w-[30rem]" />
           </motion.div>
           <motion.div
             variants={animation.aboutTextAnimation}
@@ -52,20 +52,22 @@ export default function Index() {
             transition={{
               delay: 0.02,
               type: "tween",
-              duration: 1 ,
+              duration: 1,
             }}
             // animate={con}
             className="lg:w-[40%] space-y-10 flex flex-col justify-center items-center lg:pr-10"
           >
             <p className="md:text-lg lg:text-xl px-3">
-              HIRCTF is a value driven consultancy firm providing consultancy,
+              HORN is a value driven consultancy firm providing consultancy,
               research and training services to governmental,
               inter-governmental, non-governmental and private sector
               organizations.
             </p>
-            <div className="bg-primary text-white text-2xl py-3 px-8 rounded-md hover:shadow-md cursor-pointer active:scale-90 transition-transform ease-in-out duration-100 items-end">
-              Read More
-            </div>
+            <Link to={"/about"}>
+              <div className="bg-primary text-white text-2xl py-3 px-8 rounded-md hover:shadow-md cursor-pointer active:scale-90 transition-transform ease-in-out duration-100 items-end">
+                Read More
+              </div>
+            </Link>
           </motion.div>
         </div>
       </div>

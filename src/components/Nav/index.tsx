@@ -6,7 +6,7 @@ type Props = {
   name: string;
   path?: string;
 };
-const Navbar = ({name, path}:Props) => {
+const Navbar = ({ name, path }: Props) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showTogel, setShowTogel] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -37,10 +37,9 @@ const Navbar = ({name, path}:Props) => {
           My Website
         </a>
       </div>
-      
+
       {/* Navs */}
       <div>
-
         <div className="block lg:hidden">
           <button
             className="flex items-center px-3 py-2 text-white border border-gray-600 rounded hover:text-white hover:border-white"
@@ -54,38 +53,52 @@ const Navbar = ({name, path}:Props) => {
             showMenu ? "" : "hidden"
           } w-full lg:block lg:flex-grow lg:w-auto`}
         >
-          <div className="text-xl space-x-8 lg:flex-grow">
-            <a
-              href="/"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "home" ? "border-b-2 border-white":""} `} 
-            >
-              Home
-            </a>
-            <a
-              href="/about"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "about" ? "border-b-2 border-white":""}`}
-            >
-              About
-            </a>
-
-            <a
-              href="/projects"
-              className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "projects" ? "border-b-2 border-white":""}`}
-            >
-              Projects
-            </a>
-
-            <a
-              href="/blogs"
-              className= {`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${name === "blogs" ? "border-b-2 border-white":""}`}
-            >
-              Blogs
-            </a>
+          <div className="text-xl lg:space-x-8 lg:flex-grow">
+            <Link to="/">
+              <div
+                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
+                  name === "home" ? "border-b-2 border-white" : ""
+                } `}
+              >
+                Home
+              </div>
+            </Link>
+            <Link to="/about">
+              <div
+                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
+                  name === "about" ? "border-b-2 border-white" : ""
+                }`}
+              >
+                About
+              </div>
+            </Link>
+            <Link to="/projects">
+              <div
+                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
+                  name === "projects" ? "border-b-2 border-white" : ""
+                }`}
+              >
+                Projects
+              </div>
+            </Link>
+            <Link to="/blogs">
+              <div
+                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
+                  name === "blogs" ? "border-b-2 border-white" : ""
+                }`}
+              >
+                Blogs
+              </div>
+            </Link>
 
             <div className="relative mt-4 lg:inline-block lg:mt-0">
               <button
-                className={`text-white focus:outline-none ${name === "services" ? "border-b-2 border-white":""}`}
-                onClick={()=>{setShowTogel(!showTogel)}}
+                className={`text-white focus:outline-none ${
+                  name === "services" ? "border-b-2 border-white" : ""
+                }`}
+                onClick={() => {
+                  setShowTogel(!showTogel);
+                }}
               >
                 Services
                 <svg
@@ -105,18 +118,28 @@ const Navbar = ({name, path}:Props) => {
                   showTogel ? "" : "hidden"
                 } absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-10`}
               >
-                <a
-                  href="/services/Consultancy"
-                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "consulting" ? "border-b-2 border-white":""} capitalize` }
-                >
-                  Consultancy
-                </a>
-                <a
-                  href="/services/Projectmanagment"
-                  className={`block px-4 py-2 text-white hover:bg-gray-900 ${name === "services" && path === "project" ? "border-b-2 border-white":""} capitalize` }
-                >
-                  Project Management
-                </a>
+                <Link to="/services/Consultancy">
+                  <div
+                    className={`block px-4 py-2 text-white hover:bg-gray-900 ${
+                      name === "services" && path === "consulting"
+                        ? "border-b-2 border-white"
+                        : ""
+                    } capitalize`}
+                  >
+                    Consultancy
+                  </div>
+                </Link>
+                <Link to="/services/Projectmanagment">
+                  <div
+                    className={`block px-4 py-2 text-white hover:bg-gray-900 ${
+                      name === "services" && path === "project"
+                        ? "border-b-2 border-white"
+                        : ""
+                    } capitalize`}
+                  >
+                    Project Management
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

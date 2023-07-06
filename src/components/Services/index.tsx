@@ -70,9 +70,9 @@ export default function Index() {
       </motion.div>
       <div className="mb-40 md:mb-0 w-[90%] m-auto">
         <Slider {...settings} className="space-x-4 ">
-          <ServiceCard imgLink={images.consultancy_service} title="Consultancy" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." key="co"/>
-          <ServiceCard imgLink={images.research_service} title="Research" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." key="co"/>
-          <ServiceCard imgLink={images.training_service} title="Training" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." key="co"/>
+          <ServiceCard imgLink={images.consultancy_service} title="Consultancy" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." link="/services/Consultancy" key="co"/>
+          <ServiceCard imgLink={images.research_service} title="Research" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." link="/services/Consultancy" key="co"/>
+          <ServiceCard imgLink={images.training_service} title="Training" des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." link="/services/Consultancy" key="co"/>
         </Slider>
       </div>
     </div>

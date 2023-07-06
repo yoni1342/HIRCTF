@@ -2,7 +2,7 @@ import React from 'react'
 import { images } from '../../../assets'
 export default function Founder() {
   return (
-    <div className='my-4'>
+    <div className='my-4 min-h-screen'>
         <div className='flex flex-col justify-center items-center'>
             <h2 className='lg:h1 md:h2 sm:h3 h4 px-3'>Brief Profile Of The Founder</h2>
             
