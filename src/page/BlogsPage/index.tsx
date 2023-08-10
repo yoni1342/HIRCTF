@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../components/Nav";
 import { images } from "../../assets";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../../components/ScrollTop";
+import Footer from "../../components/Footer";
 export default function index() {
   return (
     <div>
@@ -56,6 +58,10 @@ export default function index() {
             </div>
           </div>
         </div>
+      </div>
+      <Footer />
+      <div>
+        <ScrollToTop /> 
       </div>
     </div>
   );

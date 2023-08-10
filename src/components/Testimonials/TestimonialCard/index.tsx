@@ -45,7 +45,7 @@ export default function Index({ name, imgLink, des, social }: props) {
         className="w-20 h-20 object-cover rounded-full"
       />
       <div className="h2 md:h1"> " </div>
-      <p className="text-sm md:text-base">
+      <p className="text-sm md:text-base font-light">
         {des} <span>"</span>
       </p>
       <div className="flex flex-col items-center justify-center">

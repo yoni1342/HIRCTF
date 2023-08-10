@@ -48,7 +48,7 @@ export default function Index() {
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Blogs</a>
-          <a className="link link-hover">Sercices</a>
+          <a className="link link-hover">Services</a>
         </motion.div>
         <motion.div
           variants={animation.card}

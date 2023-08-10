@@ -1,21 +1,26 @@
 import React from 'react'
-import Nav from '../../components/Nav'
-import Introduction from './components/introduction'
+import Nav from '../../../components/Nav'
 import Founder from './components/Founder'
 import Establishment from './components/Establishment'
-import Footer from '../../components/Footer'
-export default function index() {
+import ScrollToTop from '../../../components/ScrollTop'
+import Footer from '../../../components/Footer'
+
+function Index() {
   return (
     <div>
         <div>
             <Nav name="about" />
         </div>
         <div>
-            <Introduction />
             <Founder />
             <Establishment />
         </div>
         <Footer />
+        <div>
+        <ScrollToTop /> 
+      </div>
     </div>
   )
 }
+
+export default Index

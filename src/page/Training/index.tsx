@@ -1,10 +1,10 @@
-import React from "react";
-import Navbar from "../../components/Nav";
-import { images } from "../../assets";
+import React from 'react'
+import Navbar from '../../components/Nav'
+import Department from '../../components/Departement/departement'
+import { images } from '../../assets'
+import Footer from '../../components/Footer'
+import ScrollToTop from '../../components/ScrollTop'
 
-import Footer from "../../components/Footer";
-import Department from "../../components/Departement/departement";
-import ScrollToTop from "../../components/ScrollTop";
 export default function index() {
   return (
     <div>
@@ -12,7 +12,7 @@ export default function index() {
 
       <div className="min-h-screen">
         <div className="flex flex-col justify-center items-center py-3">
-          <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">Consulting Services</h2>
+          <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">Training Services</h2>
           <div className="py-10 px-7 leading-8 space-y-5 lg:w-[60%]">
             <p>
               HORN is a multi-disciplinary company, which provides consultancy
@@ -120,5 +120,5 @@ export default function index() {
         <ScrollToTop /> 
       </div>
     </div>
-  );
+  )
 }

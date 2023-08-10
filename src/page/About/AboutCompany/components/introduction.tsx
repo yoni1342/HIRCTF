@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { images } from "../../../assets";
+import { images } from "../../../../assets";
 import { motion } from "framer-motion";
-import { animation } from "../../../Animations/index";
+import { animation } from "../../../../Animations/index";
 import { useInView } from "react-intersection-observer";
 
 export default function Introduction() {
@@ -30,9 +30,9 @@ export default function Introduction() {
   }, []);
 
   return (
-    <div className="my-4 ">
-      <div className="flex flex-col  items-center min-h-screen">
-        <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">About Us</h2>
+    <div className="my-4 min-h-screen">
+      <div className="flex flex-col  items-center">
+        <h2 className="lg:h2 sm:h3 h4 px-3">About Us</h2>
         <div className="flex flex-col lg:flex-row items-center justify-center lg:px-10 p-3 ">
           <motion.div
             variants={animation.aboutImage}
@@ -86,7 +86,7 @@ export default function Introduction() {
           </motion.div>
         </div>
       </div>
-      <div className="min-h-screen flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <h2 className="lg:h1 md:h2 sm:h3 h4 px-3">What we offer?</h2>
         <div className="flex items-center justify-center flex-col lg:flex-row">
           {/* image */}

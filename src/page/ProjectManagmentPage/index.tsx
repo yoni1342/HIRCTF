@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Nav'
 import Footer from '../../components/Footer'
 import banner from '../../assets/project-management 1.svg'
+import ScrollToTop from '../../components/ScrollTop'
 export default function index() {
   return (
     <div>
@@ -61,6 +62,9 @@ export default function index() {
         </div>
       </div>
       <Footer />
+      <div>
+        <ScrollToTop /> 
+      </div>
 
     </div>
   )

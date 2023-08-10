@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import { useQuery, gql } from "@apollo/client";
 import Markdown from 'markdown-to-jsx';
 import ReactMarkdown  from "react-markdown";
+import ScrollToTop from "../../components/ScrollTop";
 
 
 const blog_query = gql`
@@ -60,6 +61,9 @@ export default function Index() {
         </div>
       </div>
       <Footer />
+      <div>
+        <ScrollToTop /> 
+      </div>
     </div>
   );
 }

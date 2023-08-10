@@ -4,8 +4,8 @@ export default function Establishment() {
   return (
     <div className='my-4'>
         <div className='flex flex-col justify-center items-center'>
-            <h2 className='lg:h1 md:h2 sm:h3 h4 px-3'>Establishment of HIRCTF</h2>  
-            <div className='py-10 px-7 leading-8 space-y-5 lg:w-[70%]'>
+            <h2 className='lg:h2 sm:h3 h4 px-3'>Establishment of HIRCTF</h2>  
+            <div className='py-10 px-7 leading-8 space-y-5 lg:w-[50%]'>
 
               <p>
               Mr. Tamiru Demeke established HIRCTF with aim of expanding the consultancy, research and training services to all African nations to make a contribution for establishment of robust economic integration amongst these nations for the overall growth of the continent, to use the untapped opportunities which are prevailing in Africa by offering fantastically certified and professional consulting services, conduct research and provide training on various topics. HIRCTF has three main departments namely research, consultancy and training departments. The research department is responsible to conduct high quality researches in the areas of social, economic, and health economics areas. The consultancy department is responsible in providing consultancy services in varies areas in accordance to the interest of clients. The training department is also responsible to provide trainings in areas that clients required training.
