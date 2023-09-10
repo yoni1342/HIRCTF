@@ -23,6 +23,12 @@ jobs:
         run: |
           npm run build
 
+      - name: Debug - List files in workspace
+        run: |
+          ls -R
+          echo "Current directory: $(pwd)"
+        working-directory: ./build
+
       - name: Deploy to VPS
         run: |
           scp -r ./build/* root@82.180.131.73:/var/www/my-react-app/
