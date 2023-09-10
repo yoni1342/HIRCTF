@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { images } from "../../assets";
 import ProjectList from "./components/ProjectList";
 import pro from "../../assets/Illustration.svg";
 import { motion } from "framer-motion";

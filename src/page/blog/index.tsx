@@ -1,10 +1,7 @@
 import React from "react";
-import { images } from "../../assets";
 import Navbar from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { useQuery, gql } from "@apollo/client";
-import Markdown from 'markdown-to-jsx';
-import ReactMarkdown  from "react-markdown";
 import ScrollToTop from "../../components/ScrollTop";
 
 

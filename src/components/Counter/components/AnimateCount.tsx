@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSpring, animated, SpringValue } from "react-spring";
+import React from "react";
+import { useSpring, animated } from "react-spring";
 
 type AnimatedNumberProps = {
   number: number;

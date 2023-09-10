@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import Navbar from "../../components/Nav";
 import { images } from "../../assets";
 import ProjectCard from "./Components/ProjectCard";
 import Footer from "../../components/Footer";
-import Courses from "./Components/Test";
 import ScrollToTop from "../../components/ScrollTop";
 
 export default function Index() {

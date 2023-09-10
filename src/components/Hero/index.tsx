@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { images } from "../../assets";
 import hero from "../../assets/hero.svg";
 import { motion } from "framer-motion";
 import { animation } from "../../Animations/index";

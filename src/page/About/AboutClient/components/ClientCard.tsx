@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { images } from "../../../../assets";
 import Modal from "./Modal";
 
 type Props = {

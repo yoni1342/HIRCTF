@@ -1,18 +1,16 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import LandingPage from './page/LandingPage'
 import AboutPage from './page/About/AboutCompany'
 import Consulting from './page/ConsultingPage'
-import ProjectManagment from './page/ProjectManagmentPage'
 import Projects from './page/Projects'
 import Blogs from './page/BlogsPage'
 import Blog from './page/blog/'
 import History from './page/About/History'
 import AboutClient from './page/About/AboutClient'
 import ResearchPage from './page/ResearchPage'
-import Footer from './components/Footer';
 import Training from './page/Training'
 function App() {
   return (
