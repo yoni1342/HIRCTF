@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          scp -r ./build/* root@82.180.131.73:/var/www/my-react-app/
+          scp -r ./build/* root@82.180.131.73:/var/www/horn/
