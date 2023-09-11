@@ -9,16 +9,26 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    steps:       
-    - name: Deploy using ssh
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /var/www/HIRCTF/
-          git pull origin main
-          git status
-          npm install --only=prod
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and npm
+        run: |
+          sudo apt update
+          sudo apt install -y nodejs npm
+          npm install
+
+      - name: Build React App
+        run: |
+          npm run build
+      
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            scp -r ./build/* root@82.180.131.73:/var/www/horn/
