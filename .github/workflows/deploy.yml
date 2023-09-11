@@ -22,7 +22,16 @@ jobs:
       - name: Build React App
         run: |
           npm run build
+       
+      - name: Install ssh
+        run: |
+          sudo apt-get install openssh-client
           
+      - name: Create SSH directory
+        run: |
+          mkdir -p ~/.ssh/
+          chmod 700 ~/.ssh/
+
       - name: Add host key to known_hosts
         run: |
           ssh-keyscan -H 82.180.131.73 >> ~/.ssh/known_hosts
