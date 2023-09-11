@@ -31,4 +31,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            scp -r ./build/* root@82.180.131.73:/var/www/horn/
+            ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+            scp -r ./build/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/horn/
+            
+    
