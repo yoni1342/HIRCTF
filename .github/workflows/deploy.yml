@@ -22,16 +22,30 @@ jobs:
       - name: Build React App
         run: |
           npm run build
-      
-      - name: Deploy using ssh
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          script: |
-            ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-            scp -r ./build/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/horn/
-            
-    
+       
+      - name: Install ssh
+        run: |
+          sudo apt-get install openssh-client
+
+      - name: Create SSH directory
+        run: |
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 82.180.131.73 >> ~/.ssh/known_hosts
+          scp -r ./build/* root@82.180.131.73:/var/www/horn/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add host key to known_hosts
+        run: |
+          ssh-keyscan -H 82.180.131.73 >> ~/.ssh/known_hosts
+
+      - name: Debug - List files in workspace
+        run: |
+          ls -R
+          echo "Current directory: $(pwd)"
+        working-directory: ./build
+
+      - name: Deploy to VPS
+        run: |
+          scp -r ./build/* root@82.180.131.73:/var/www/horn/
