@@ -7,31 +7,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [12.x]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Node.js and npm
-        run: |
-          sudo apt update
-          sudo apt install -y nodejs npm
-          npm install
-
-      - name: Build React App
-        run: |
-          npm run build
-       
-      - name: Install ssh
-        run: |
-          sudo apt-get install openssh-client
-
-      - name: Create SSH directory
-        run: |
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 82.180.131.73 >> ~/.ssh/known_hosts
-          scp -r ./build/* root@82.180.131.73:/var/www/horn/
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm test
+      - run: npm run build

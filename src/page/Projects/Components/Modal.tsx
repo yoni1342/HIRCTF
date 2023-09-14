@@ -12,21 +12,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description, chil
   const handleClose = () => {
     onClose();
   };
-  // useEffect (() => {
-  //   const handleKeyPress = (event: KeyboardEvent) => {
-  //     if (event.key === 'Escape') {
-  //       handleClose();
-  //     }
-  //   };
+  useEffect (() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleClose();
+      }
+    };
 
-  //   if (isOpen) {
-  //     document.addEventListener('keydown', handleKeyPress);
-  //   }
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyPress);
+    }
 
-  //   return () => {
-  //     document.removeEventListener('keydown', handleKeyPress);
-  //   };
-  // }, [isOpen]);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {

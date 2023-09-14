@@ -62,7 +62,7 @@ export default function Index() {
         }}
         className="w-full lg:w-1/2 flex flex-col justify-center p-10"
       >
-        <form className="grid gap-4">
+        <form className="grid gap-4" action='https://formsubmit.co/cdc19326455c814f0363f175a1bd1f11' method='POST'>
           <input
             type="text"
             name="Name"
