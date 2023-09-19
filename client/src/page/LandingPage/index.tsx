@@ -44,9 +44,9 @@ export default function index() {
       <div>
         <Gallery />
       </div>
-      <div>
+      {/* <div>
         <Blog />
-      </div>
+      </div> */}
       <div>
         <Contatct />
       </div>
