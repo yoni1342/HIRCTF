@@ -4,3 +4,4 @@ services:
   client:
     build:
       context: ./client
+    image: yoni1342/hirctf
