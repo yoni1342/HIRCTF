@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_headofdept_head_of_depts",
+  "info": {
+    "displayName": "headOfDept"
+  },
+  "options": {},
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "socialmeadialink": {
+      "displayName": "Social Meadia",
+      "type": "component",
+      "repeatable": true,
+      "component": "socialmeadia.social-meadia"
+    }
+  }
+}

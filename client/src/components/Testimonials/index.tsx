@@ -69,13 +69,13 @@ export default function Index() {
           <TestimonialCard
             imgLink={images.test1}
             name="Dr. Abraham"
-            des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus"
+            des="Working with HORN has been a game-changer for our organization. Their in-depth research, strategic consultancy, and tailored training have elevated our capabilities and performance. HORN's commitment to excellence is truly remarkable, and their team's dedication is unparalleled. We're proud to partner with HORN in our journey towards success"
             social={{ facebook: "#", telegram: "#", linkedin: "#" }}
           />
           <TestimonialCard
             imgLink={images.test2}
             name="Dr. Abel Abebe"
-            des="Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus"
+            des="Choosing HORN was one of the best decisions we made. Their expert consultancy not only solved our complex business challenges but also opened new avenues for growth. Their commitment to ethical practices and innovation is truly commendable. We look forward to a long and fruitful partnership with HORN."
             social={{ twitter: "#", linkedin: "#" }}
           />
         </Slider>

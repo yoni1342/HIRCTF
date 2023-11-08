@@ -8,8 +8,6 @@ services:
 
   strapi:
     container_name: strapi
-    build:
-      context: ./cms
     image: strapi:latest
     # restart: unless-stopped
     env_file: .env
@@ -23,7 +21,6 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       APP_KEYS: ${APP_KEYS}
-      NODE_ENV: ${NODE_ENV}
     volumes:
       - ./cms/config:/opt/app/config
       - ./cms/src:/opt/app/src

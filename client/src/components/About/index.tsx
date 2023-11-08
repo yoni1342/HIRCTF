@@ -63,7 +63,7 @@ export default function Index() {
               inter-governmental, non-governmental and private sector
               organizations.
             </p>
-            <Link to={"/about"}>
+            <Link to={"/about/company"}>
               <div className="bg-primary text-white text-2xl py-3 px-8 rounded-md hover:shadow-md cursor-pointer active:scale-90 transition-transform ease-in-out duration-100 items-end">
                 Read More
               </div>

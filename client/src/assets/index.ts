@@ -20,5 +20,7 @@ export const images = {
     offer: require('./offer.png'),
     offermobil: require('./offermobile.png'),
     logo1: require('./logo1.png'),
-    logo2: require('./logo2.png')
+    logo2: require('./logo2.png'),
+    companyStructer: require('./companystructer.png'),
+    logo: require('./logo.png'),
 }

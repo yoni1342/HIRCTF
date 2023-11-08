@@ -31,7 +31,7 @@ export default function Index(props: { title: string; des: string; id?:string })
     >
       <div className="card-body items-center">
         <h2 className="lg:h3 md:h4 text-lg font-bold text-primary ">{title}</h2>
-        <p className="text-sm md:text-base">{des} </p>
+        <p className="text-sm md:text-base line-clamp-6">{des} </p>
       </div>
 
       <input type="checkbox" id={`my-modal-3`+props.id}

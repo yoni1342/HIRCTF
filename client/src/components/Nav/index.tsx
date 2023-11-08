@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import {images} from '../../assets'
 type Props = {
   name: string;
   path?: string;
@@ -30,12 +30,12 @@ const Navbar = ({ name, path }: Props) => {
     <nav
       className={`${
         scrollPosition > 0 ? "fixed top-0 left-0 right-0 shadow-md" : ""
-      } flex flex-wrap items-center justify-between p-6 bg-primary z-10`}
+      } flex flex-wrap items-center justify-between p-6 bg-white z-10`}
     >
       {/* Logo */}
       <div className="flex items-center mr-6">
         <a href="/" className="text-xl font-bold text-white">
-          My Website
+          <img src={images.logo} className="w-14 h-14 object-contain" />
         </a>
       </div>
 
@@ -43,7 +43,7 @@ const Navbar = ({ name, path }: Props) => {
       <div>
         <div className="block lg:hidden">
           <button
-            className="flex items-center px-3 py-2 text-white border border-gray-600 rounded hover:text-white hover:border-white"
+            className="flex items-center px-3 py-2 text-black border border-gray-600 rounded hover:text-black "
             onClick={toggleMenu}
           >
             {showMenu ? <FaTimes /> : <FaBars />}
@@ -57,8 +57,8 @@ const Navbar = ({ name, path }: Props) => {
           <div className="text-xl lg:space-x-8 lg:flex-grow">
             <Link to="/">
               <div
-                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
-                  name === "home" ? "border-b-2 border-white" : ""
+                className={`block mt-4 text-black lg:inline-block lg:mt-0 mr-4 ${
+                  name === "home" ? "border-b-2 border-primary" : ""
                 } `}
               >
                 Home
@@ -68,8 +68,8 @@ const Navbar = ({ name, path }: Props) => {
             {/* About Nav */}
             <div className="relative mt-4 lg:inline-block lg:mt-0">
               <button
-                className={`text-white focus:outline-none ${
-                  name === "about" ? "border-b-2 border-white" : ""
+                className={`text-black focus:outline-none ${
+                  name === "about" ? "border-b-2 border-primary" : ""
                 }`}
                 onClick={() => {
                   setAboutShowTogel(!aboutShowTogel);
@@ -97,7 +97,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "about" && path === "company"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >
@@ -108,7 +108,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "about" && path === "clinets"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >
@@ -119,7 +119,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "about" && path === "history"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >
@@ -130,27 +130,27 @@ const Navbar = ({ name, path }: Props) => {
             </div>
             <Link to="/projects">
               <div
-                className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
-                  name === "projects" ? "border-b-2 border-white" : ""
+                className={`block mt-4 text-black lg:inline-block lg:mt-0 mr-4 ${
+                  name === "projects" ? "border-b-2 border-primary" : ""
                 }`}
               >
                 Projects
               </div>
             </Link>
-            <Link to="/blogs">
+            {/* <Link to="/blogs">
               <div
                 className={`block mt-4 text-white lg:inline-block lg:mt-0 hover:text-white mr-4 ${
-                  name === "blogs" ? "border-b-2 border-white" : ""
+                  name === "blogs" ? "border-b-2 border-primary" : ""
                 }`}
               >
                 Blogs
               </div>
-            </Link>
+            </Link> */}
 
             <div className="relative mt-4 lg:inline-block lg:mt-0">
               <button
-                className={`text-white focus:outline-none ${
-                  name === "services" ? "border-b-2 border-white" : ""
+                className={`text-black focus:outline-none ${
+                  name === "services" ? "border-b-2 border-primary" : ""
                 }`}
                 onClick={() => {
                   setShowTogel(!showTogel);
@@ -178,7 +178,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "services" && path === "consulting"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >
@@ -189,7 +189,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "services" && path === "project"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >
@@ -200,7 +200,7 @@ const Navbar = ({ name, path }: Props) => {
                   <div
                     className={`block px-4 py-2 text-white hover:bg-gray-900 ${
                       name === "services" && path === "project"
-                        ? "border-b-2 border-white"
+                        ? "border-b-2 border-primary"
                         : ""
                     } capitalize`}
                   >

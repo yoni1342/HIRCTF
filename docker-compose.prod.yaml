@@ -5,6 +5,15 @@ services:
       dockerfile: Dockerfile.prod
     container_name: client-prod-c
     ports:
-      - "8080:80"
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+  strapi:
+    build:
+      context: ./cms
+      dockerfile: Dockerfile.prod
+    container_name: hirctf-strapi-prod-c
+    restart: always
+    env_file: .env
     environment:
       - NODE_ENV=production

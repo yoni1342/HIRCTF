@@ -41,7 +41,7 @@ export default function Introduction() {
             transition={{
               delay: 0.2,
               type: "tween",
-              duration: 1 ,
+              duration: 1,
             }}
             className=""
           >
@@ -49,40 +49,26 @@ export default function Introduction() {
           </motion.div>
 
           <motion.div
-          variants={animation.aboutTextAnimation}
-          ref={ref}
-          animate={hasAnimated ? "visible" : "hidden"}
-          transition={{
-            delay: 0.02,
-            type: "tween",
-            duration: 1 ,
-          }}
-          className="py-3 px-4 space-y-5 lg:px-20 lg:w-[70%] leading-10 lg:text-lg">
-            <p>
-              HORN INTERNATIONAL RESEARCH, CONSULTANCY AND TRAINING FIRM
-              (HIRCTF) was established on 17th February 2022 in Addis Ababa,
-              Ethiopia, with a license to provide research, consultancy, and
-              training services worldwide. Although our current focus is on East
-              African countries, our goal is to cater to customers globally.
-            </p>
-            <p>
-              As a value-driven consultancy firm, HIRCTF offers a range of
-              services to governmental, inter-governmental, non-governmental,
-              and private sector organizations. Our expertise lies in business,
-              economic, and social consulting, as well as project management,
-              monitoring and evaluation. We also conduct research in economic,
-              social, and health economic areas and provide training on various
-              topics, including project management and monitoring and
-              evaluation.
-            </p>
-            <p>
-              At HIRCTF, we are deeply committed to delivering effective and
-              result-driven social research. Our approach combines academic
-              rigor with practical insights, tailored to meet the specific needs
-              of each client. We strive to maintain the highest caliber of
-              research, ensuring a balance between theoretical excellence and
-              real-world applicability.
-            </p>
+            variants={animation.aboutTextAnimation}
+            ref={ref}
+            animate={hasAnimated ? "visible" : "hidden"}
+            transition={{
+              delay: 0.02,
+              type: "tween",
+              duration: 1,
+            }}
+            className="py-3 px-4 space-y-5 lg:px-20 lg:w-[70%] leading-10 lg:text-lg"
+          >
+            HORN INTERNATIONAL RESEARCH, CONSULTANCY AND TRAINING FIRM,
+            hereafter called as “HORN” is licensed and ESTABLISHED on 17
+            February 2022 in Addis Ababa, Ethiopia to provide Research,
+            Consultancy and Short-Term Training services to governmental,
+            inter-governmental, non-governmental and private sector
+            organizations, here after called “Clients” everywhere in the world.
+            HORN has expertise in Economics, Entrepreneurship, Financial
+            education and management, Feasibility study, Health, Health
+            Economics, Project Design and Management, and Social Welfare/social
+            protection, among others.
           </motion.div>
         </div>
       </div>

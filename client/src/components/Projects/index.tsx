@@ -38,7 +38,7 @@ function Index() {
           }}
           className=""
         >
-          <img src={pro} alt="" className="lg:w-[100rem]" />
+          <img src={pro} alt="" className="lg:w-[3000px]" />
         </motion.div>
         <div className="px-5 flex flex-col space-y-5 items-center justify-center">
           <motion.div
@@ -53,11 +53,13 @@ function Index() {
           >
             <p className="text-sm  md:text-base">
               {" "}
-              Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-              lobortis.
+              Step into the world of tangible impact. In our projects section,
+              you'll discover a tapestry of endeavors, each a testament to our
+              commitment to excellence and positive change. From economic
+              development initiatives to health programs, we bring our expertise
+              to life, shaping the future of nations. Explore the stories of
+              transformation, innovation, and progress that define our work and
+              inspire us to keep reaching for new horizons.
             </p>
           </motion.div>
 
