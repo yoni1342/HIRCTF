@@ -54,7 +54,7 @@ const Hero = () => {
             research, consultancy, and training services. Unlock new
             possibilities and accelerate your success today.
           </p>
-          <Link to={"/about"}>
+          <Link to={"/about/company"}>
             <div className="w-40 bg-primary text-white px-5 py-3 font-bold my-3 cursor-pointer shadow-md hover:shadow-lg active:scale-95 transition-transform ease-in-out duration-100">
               Read More
             </div>
