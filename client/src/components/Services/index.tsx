@@ -5,8 +5,26 @@ import { images } from "../../assets/index";
 import { motion } from "framer-motion";
 import { animation } from "../../Animations/index";
 import { useInView } from "react-intersection-observer";
+import { gql, useQuery } from "@apollo/client";
+// import HomeServiceQuery from "../../graphql/Query/HomeServiceQuery.gql"
+
+const HomeServiceQuery = gql`
+  query getServices {
+    services {
+      data {
+        attributes {
+          name
+          description
+          slag
+        }
+      }
+    }
+  }
+`;
 
 export default function Index() {
+  const {data,loading,error} = useQuery(HomeServiceQuery)
+  console.log("data", data);
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "100px",
@@ -52,6 +70,7 @@ export default function Index() {
       },
     ],
   };
+
   return (
     <div className="flex flex-col justify-center min-h-screen mb-10">
       <motion.div
